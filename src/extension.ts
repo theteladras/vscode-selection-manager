@@ -1,26 +1,71 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+import { range } from './utils';
 
-// this method is called when your extension is activated
-// your extension is activated the very first time the command is executed
-export function activate(context: vscode.ExtensionContext) {
-	
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "selection-manager" is now active!');
+async function copyManager(): Promise<void> {
+	const editor = vscode.window.activeTextEditor;
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('selection-manager.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from Selection Manager!');
+	if (!editor) return;
+
+	const selectedText = editor.document.getText(editor.selection);
+
+	const document = await vscode.workspace.openTextDocument({
+		language: editor.document.languageId,
+		content: selectedText
 	});
 
-	context.subscriptions.push(disposable);
+	vscode.window.showTextDocument(document, undefined, true);
 }
 
-// this method is called when your extension is deactivated
+async function moveManager(): Promise<void> {
+	const editor = vscode.window.activeTextEditor;
+
+	if (!editor) return;
+
+	const selectedText = editor.document.getText(editor.selection);
+
+	const selectionStartIndex = editor.selection.start.line;
+	const selectionEndIndex = editor.selection.end.line;
+
+	editor.edit(edit => {
+		range(selectionStartIndex, selectionEndIndex).forEach(index => {
+			const line = editor.document.lineAt(index);
+			edit.delete(line.rangeIncludingLineBreak);
+		});
+	});
+
+	const document = await vscode.workspace.openTextDocument({
+		language: editor.document.languageId,
+		content: selectedText
+	});
+
+	vscode.window.showTextDocument(document, undefined, true);
+}
+
+async function searchManager(): Promise<void> {
+	const editor = vscode.window.activeTextEditor;
+
+	if (!editor) return;
+
+	const selectedText = editor.document.getText(editor.selection);
+
+	const uri = vscode.Uri.from({
+		path: 'search',
+		query: `q=${selectedText}`,
+		authority: 'google.com',
+		scheme: 'https'
+	});
+
+	vscode.env.openExternal(uri);
+}
+
+export function activate(context: vscode.ExtensionContext) {
+	console.log('Congratulations, your extension "selection-manager" is now active!');
+
+	let dispoeCopyManager = vscode.commands.registerCommand('selection-manager.copy', copyManager);
+	let dispoeMoveManager = vscode.commands.registerCommand('selection-manager.move', moveManager);
+	let dispoeSearchManager = vscode.commands.registerCommand('selection-manager.search', searchManager);
+
+	context.subscriptions.push(dispoeCopyManager, dispoeMoveManager, dispoeSearchManager);
+}
+
 export function deactivate() {}
