@@ -3,7 +3,7 @@
   "displayName": "Selection Manager",
   "description": "Manage selected text of a file.",
   "icon": "images/manage-selection.png",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "engines": {
     "vscode": "^1.66.0"
