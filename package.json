@@ -2,7 +2,8 @@
   "name": "selection-manager",
   "displayName": "Selection Manager",
   "description": "Manage selected text of a file.",
-  "version": "0.0.2",
+  "icon": "images/manage-selection.png",
+  "version": "0.0.4",
   "license": "MIT",
   "engines": {
     "vscode": "^1.66.0"
@@ -13,7 +14,8 @@
   "activationEvents": [
     "onCommand:selection-manager.copy",
     "onCommand:selection-manager.move",
-    "onCommand:selection-manager.search"
+    "onCommand:selection-manager.search",
+    "onCommand:selection-manager.url-encode"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -29,8 +31,16 @@
       {
         "command": "selection-manager.search",
         "title": "Search Selection"
+      },
+      {
+        "command": "selection-manager.url-encode",
+        "title": "URL Encode Selection"
       }
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theteladras/vscode-selection-manager.git"
   },
   "scripts": {
     "vscode:prepublish": "yarn run package",
