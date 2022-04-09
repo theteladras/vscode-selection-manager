@@ -14,3 +14,6 @@ move the selection in a new file, results in having the original text deleated
 
 #### Search Selection
 search for the selection on google
+
+#### URL Encode Selection
+it will replace the selected text with a URL encoded version of it
