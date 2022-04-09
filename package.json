@@ -3,7 +3,7 @@
   "displayName": "Selection Manager",
   "description": "Manage selected text of a file.",
   "icon": "images/manage-selection.png",
-  "version": "0.0.5",
+  "version": "0.0.4",
   "license": "MIT",
   "engines": {
     "vscode": "^1.66.0"
@@ -51,7 +51,8 @@
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+	"deploy": "npm run compile && npm version patch && vsce publish"
   },
   "devDependencies": {
     "@types/glob": "^7.2.0",
