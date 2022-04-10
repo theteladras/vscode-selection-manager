@@ -8,3 +8,4 @@ export * from './base64Decode';
 export * from './isolate';
 export * from './lowercase';
 export * from './uppercase';
+export * from './camelToSnake';

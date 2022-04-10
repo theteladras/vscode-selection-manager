@@ -45,3 +45,7 @@ turns the selected text to lowercase
 ---
 #### >Uppercase Selection
 turns the selected text to uppercase
+
+---
+#### >Camel to Snake case Selection
+the selected camel case text will be turned to snake case _(eg. callAsync -> call_async)_

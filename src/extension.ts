@@ -10,6 +10,7 @@ import {
 	isolateManager,
 	lowercaseManager,
 	uppercaseManager,
+	camelToSnakeManager,
 } from './managers';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -57,6 +58,10 @@ export function activate(context: vscode.ExtensionContext) {
 		'selection-manager.uppercase',
 		uppercaseManager
 	);
+	const disposeCamelToSnakeManager = vscode.commands.registerCommand(
+		'selection-manager.camel-to-snake',
+		camelToSnakeManager
+	);
 
 	context.subscriptions.push(
 		dispoeCopyManager,
@@ -67,7 +72,8 @@ export function activate(context: vscode.ExtensionContext) {
 		dispoeUrlDecodeManager,
 		dispoeBase64DecodeManager,
 		disposeLowercaseManager,
-		disposeUppercaseManager
+		disposeUppercaseManager,
+		disposeCamelToSnakeManager
 	);
 }
 
