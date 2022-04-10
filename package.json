@@ -1,79 +1,89 @@
 {
-  "name": "selection-manager",
-  "displayName": "Selection Manager",
-  "description": "Manage selected text of a file.",
-  "icon": "images/manage-selection.png",
-  "version": "0.0.8",
-  "license": "MIT",
-  "engines": {
-    "vscode": "^1.66.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "onCommand:selection-manager.copy",
-    "onCommand:selection-manager.move",
-    "onCommand:selection-manager.search",
-    "onCommand:selection-manager.url-encode",
-    "onCommand:selection-manager.base64-encode"
-  ],
-  "main": "./dist/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "selection-manager.copy",
-        "title": "Copy Selection"
-      },
-      {
-        "command": "selection-manager.move",
-        "title": "Move Selection"
-      },
-      {
-        "command": "selection-manager.search",
-        "title": "Search Selection"
-      },
-      {
-        "command": "selection-manager.url-encode",
-        "title": "URL Encode Selection"
-      },
-      {
-        "command": "selection-manager.base64-encode",
-        "title": "Base64 Encode Selection"
-      }
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/theteladras/vscode-selection-manager.git"
-  },
-  "scripts": {
-    "vscode:prepublish": "yarn run package",
-    "compile": "webpack",
-    "watch": "webpack --watch",
-    "package": "webpack --mode production --devtool hidden-source-map",
-    "compile-tests": "tsc -p . --outDir out",
-    "watch-tests": "tsc -p . -w --outDir out",
-    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
-    "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js",
-    "deploy": "npm run compile && vsce publish"
-  },
-  "devDependencies": {
-    "@types/glob": "^7.2.0",
-    "@types/mocha": "^9.1.0",
-    "@types/node": "14.x",
-    "@types/vscode": "^1.66.0",
-    "@typescript-eslint/eslint-plugin": "^5.16.0",
-    "@typescript-eslint/parser": "^5.16.0",
-    "@vscode/test-electron": "^2.1.3",
-    "eslint": "^8.11.0",
-    "glob": "^7.2.0",
-    "mocha": "^9.2.2",
-    "ts-loader": "^9.2.8",
-    "typescript": "^4.5.5",
-    "webpack": "^5.70.0",
-    "webpack-cli": "^4.9.2"
-  },
-  "publisher": "ManageTextSelection"
+	"name": "selection-manager",
+	"displayName": "Selection Manager",
+	"description": "Manage selected text of a file.",
+	"icon": "images/manage-selection.png",
+	"version": "0.0.9",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.66.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:selection-manager.copy",
+		"onCommand:selection-manager.move",
+		"onCommand:selection-manager.search",
+		"onCommand:selection-manager.url-encode",
+		"onCommand:selection-manager.base64-encode",
+		"onCommand:selection-manager.url-decode",
+		"onCommand:selection-manager.base64-decode"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "selection-manager.copy",
+				"title": "Copy Selection"
+			},
+			{
+				"command": "selection-manager.move",
+				"title": "Move Selection"
+			},
+			{
+				"command": "selection-manager.search",
+				"title": "Search Selection"
+			},
+			{
+				"command": "selection-manager.url-encode",
+				"title": "URL Encode Selection"
+			},
+			{
+				"command": "selection-manager.base64-encode",
+				"title": "Base64 Encode Selection"
+			},
+			{
+				"command": "selection-manager.url-decode",
+				"title": "URL Decode Selection"
+			},
+			{
+				"command": "selection-manager.base64-decode",
+				"title": "Base64 Decode Selection"
+			}
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/theteladras/vscode-selection-manager.git"
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run package",
+		"compile": "webpack",
+		"watch": "webpack --watch",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"compile-tests": "tsc -p . --outDir out",
+		"watch-tests": "tsc -p . -w --outDir out",
+		"pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js",
+		"deploy": "npm run compile && vsce publish"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.0",
+		"@types/node": "14.x",
+		"@types/vscode": "^1.66.0",
+		"@typescript-eslint/eslint-plugin": "^5.16.0",
+		"@typescript-eslint/parser": "^5.16.0",
+		"@vscode/test-electron": "^2.1.3",
+		"eslint": "^8.11.0",
+		"glob": "^7.2.0",
+		"mocha": "^9.2.2",
+		"ts-loader": "^9.2.8",
+		"typescript": "^4.5.5",
+		"webpack": "^5.70.0",
+		"webpack-cli": "^4.9.2"
+	},
+	"publisher": "ManageTextSelection"
 }

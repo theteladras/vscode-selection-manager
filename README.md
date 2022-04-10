@@ -1,22 +1,29 @@
 # Move selection to new file
 
 This extension will allow you to manage selected text.<br>
+The aim of this extension is to increase productivity by unifying set of actions over an text selection.<br>
 
 ## Usage
 
-Selecte text of a file and open the 'editor commands' (ctrl+shift+P / cmd+shift+P) and search for one of the next commands:
+Selecte text of a file and open the 'editor commands' _(ctrl+shift+P / cmd+shift+P)_ and search for one of the next commands:
 
-#### Copy Selection
+#### >Copy Selection
 copy the selection in a new file
 
-#### Move Selection
+#### >Move Selection
 move the selection in a new file, results in having the original text deleated
 
-#### Search Selection
+#### >Search Selection
 search for the selection on google
 
-#### URL Encode Selection
+#### >URL Encode Selection
 it will replace the selected text with a URL encoded version of it
 
-#### Base64 Encode Selection
+#### >Base64 Encode Selection
 it will replace the selected text with a Base64 encoded version of it
+
+#### >URL Decode Selection
+it will replace the selected text with a URL decoded version of it
+
+#### >Base64 Decode Selection
+it will replace the selected text with a Base64 decoded version of it
