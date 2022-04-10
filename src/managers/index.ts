@@ -9,3 +9,4 @@ export * from './isolate';
 export * from './lowercase';
 export * from './uppercase';
 export * from './camelToSnake';
+export * from './snakeToCamel';

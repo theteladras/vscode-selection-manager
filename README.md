@@ -5,7 +5,7 @@ The aim of this extension is to increase productivity by unifying set of actions
 
 ## Usage
 
-Selecte text of a file and open the 'editor commands' _(ctrl+shift+P / cmd+shift+P)_ and search for one of the next commands:
+Select a text of a file and open the *editor commands* _(ctrl+shift+P / cmd+shift+P)_ and search for one of the next commands:
 
 #### >Copy Selection
 copy the selection in a new file
@@ -49,3 +49,7 @@ turns the selected text to uppercase
 ---
 #### >Camel to Snake case Selection
 the selected camel case text will be turned to snake case _(eg. callAsync -> call_async)_
+
+---
+#### >Snake to Camel case Selection
+the selected snake case text will be turned to camel case _(eg. call_async -> callAsync)_
