@@ -8,6 +8,8 @@ import {
 	urlDecodeManager,
 	base64DecodeManager,
 	isolateManager,
+	lowercaseManager,
+	uppercaseManager,
 } from './managers';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -47,6 +49,14 @@ export function activate(context: vscode.ExtensionContext) {
 		'selection-manager.base64-decode',
 		base64DecodeManager
 	);
+	const disposeLowercaseManager = vscode.commands.registerCommand(
+		'selection-manager.lowercase',
+		lowercaseManager
+	);
+	const disposeUppercaseManager = vscode.commands.registerCommand(
+		'selection-manager.uppercase',
+		uppercaseManager
+	);
 
 	context.subscriptions.push(
 		dispoeCopyManager,
@@ -55,7 +65,9 @@ export function activate(context: vscode.ExtensionContext) {
 		dispoeUrlEncodeManager,
 		dispoeBase64EncodeManager,
 		dispoeUrlDecodeManager,
-		dispoeBase64DecodeManager
+		dispoeBase64DecodeManager,
+		disposeLowercaseManager,
+		disposeUppercaseManager
 	);
 }
 

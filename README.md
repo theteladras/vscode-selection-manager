@@ -37,3 +37,11 @@ it will replace the selected text with a URL decoded version of it
 ---
 #### >Base64 Decode Selection
 it will replace the selected text with a Base64 decoded version of it
+
+---
+#### >Lowercase Selection
+turns the selected text to lowercase
+
+---
+#### >Uppercase Selection
+turns the selected text to uppercase

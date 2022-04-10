@@ -3,7 +3,7 @@
 	"displayName": "Selection Manager",
 	"description": "Manage selected text of a file.",
 	"icon": "images/manage-selection.png",
-	"version": "0.0.10",
+	"version": "0.0.11",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.66.0"
@@ -19,7 +19,9 @@
 		"onCommand:selection-manager.base64-encode",
 		"onCommand:selection-manager.url-decode",
 		"onCommand:selection-manager.base64-decode",
-		"onCommand:selection-manager.isolate"
+		"onCommand:selection-manager.isolate",
+		"onCommand:selection-manager.lowercase",
+		"onCommand:selection-manager.uppercase"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -55,6 +57,14 @@
 			{
 				"command": "selection-manager.base64-decode",
 				"title": "Base64 Decode Selection"
+			},
+			{
+				"command": "selection-manager.lowercase",
+				"title": "Lowercase Selection"
+			},
+			{
+				"command": "selection-manager.uppercase",
+				"title": "Uppercase Selection"
 			}
 		]
 	},
