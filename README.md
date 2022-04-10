@@ -10,20 +10,30 @@ Selecte text of a file and open the 'editor commands' _(ctrl+shift+P / cmd+shift
 #### >Copy Selection
 copy the selection in a new file
 
+---
 #### >Move Selection
 move the selection in a new file, results in having the original text deleated
 
+---
+#### >Isolate Selection
+isolate the selection, results in having the content of the document replaced with just the selected text
+
+---
 #### >Search Selection
 search for the selection on google
 
+---
 #### >URL Encode Selection
 it will replace the selected text with a URL encoded version of it
 
+---
 #### >Base64 Encode Selection
 it will replace the selected text with a Base64 encoded version of it
 
+---
 #### >URL Decode Selection
 it will replace the selected text with a URL decoded version of it
 
+---
 #### >Base64 Decode Selection
 it will replace the selected text with a Base64 decoded version of it

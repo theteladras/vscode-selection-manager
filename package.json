@@ -3,7 +3,7 @@
 	"displayName": "Selection Manager",
 	"description": "Manage selected text of a file.",
 	"icon": "images/manage-selection.png",
-	"version": "0.0.9",
+	"version": "0.0.10",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.66.0"
@@ -18,7 +18,8 @@
 		"onCommand:selection-manager.url-encode",
 		"onCommand:selection-manager.base64-encode",
 		"onCommand:selection-manager.url-decode",
-		"onCommand:selection-manager.base64-decode"
+		"onCommand:selection-manager.base64-decode",
+		"onCommand:selection-manager.isolate"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -30,6 +31,10 @@
 			{
 				"command": "selection-manager.move",
 				"title": "Move Selection"
+			},
+			{
+				"command": "selection-manager.isolate",
+				"title": "Isolate Selection"
 			},
 			{
 				"command": "selection-manager.search",

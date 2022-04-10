@@ -5,3 +5,4 @@ export * from './urlEncode';
 export * from './base64Encode';
 export * from './urlDecode';
 export * from './base64Decode';
+export * from './isolate';

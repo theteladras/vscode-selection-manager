@@ -7,6 +7,7 @@ import {
 	urlEncodeManager,
 	urlDecodeManager,
 	base64DecodeManager,
+	isolateManager,
 } from './managers';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -21,6 +22,10 @@ export function activate(context: vscode.ExtensionContext) {
 	const dispoeMoveManager = vscode.commands.registerCommand(
 		'selection-manager.move',
 		moveManager
+	);
+	const dispoeIsolateManager = vscode.commands.registerCommand(
+		'selection-manager.isolate',
+		isolateManager
 	);
 	const dispoeSearchManager = vscode.commands.registerCommand(
 		'selection-manager.search',
