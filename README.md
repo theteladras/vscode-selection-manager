@@ -1,4 +1,4 @@
-# Move selection to new file
+# Selection Manager
 
 This extension will allow you to manage selected text.<br>
 The aim of this extension is to increase productivity by unifying set of actions over an text selection.<br>
