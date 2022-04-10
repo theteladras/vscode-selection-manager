@@ -12,6 +12,7 @@ import {
 	uppercaseManager,
 	camelToSnakeManager,
 	snakeToCamelManager,
+	lengthManager,
 } from './managers';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -67,6 +68,10 @@ export function activate(context: vscode.ExtensionContext) {
 		'selection-manager.snake-to-camel',
 		snakeToCamelManager
 	);
+	const disposeLengthManager = vscode.commands.registerCommand(
+		'selection-manager.length',
+		lengthManager
+	);
 
 	context.subscriptions.push(
 		dispoeCopyManager,
@@ -79,7 +84,8 @@ export function activate(context: vscode.ExtensionContext) {
 		disposeLowercaseManager,
 		disposeUppercaseManager,
 		disposeCamelToSnakeManager,
-		disposeSnakeToCamelManager
+		disposeSnakeToCamelManager,
+		disposeLengthManager
 	);
 }
 
