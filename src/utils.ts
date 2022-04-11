@@ -16,3 +16,5 @@ export const kebabToCamel = (str: string) => str.replace(/-./g, x=>x[1].toUpperC
 export const camelToKebab = (str: string) => str.replace(/[A-Z]+(?![a-z])|[A-Z]/g, ($, ofs) => (ofs ? "-" : "") + $.toLowerCase());
 
 export const kebabToSnake = (str: string) => str.replace(/-/g, "_");
+
+export const snakeToKebab = (str: string) => str.replace(/_/g, "-");

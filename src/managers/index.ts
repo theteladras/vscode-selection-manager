@@ -14,3 +14,4 @@ export * from './length';
 export * from './kebabToCamel';
 export * from './camelToKebab';
 export * from './kebabToSnake';
+export * from './snakeToCamel';

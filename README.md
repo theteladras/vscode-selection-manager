@@ -67,5 +67,9 @@ the selected camel case text will be turned to kebab case _(eg. callAsync -> cal
 the selected kebab case text will be turned to snake case _(eg. call-sync -> call\_async)_
 
 ---
+#### >Snake to Kebab case Selection
+the selected snake case text will be turned to kebab case _(eg. call\_sync -> call-async)_
+
+---
 #### >Length of Selection
 pops an alert, in the bottom right corner, with the information of the length of the selected text

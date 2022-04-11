@@ -1,14 +1,14 @@
 import * as vscode from 'vscode';
-import { camelToSnakeCase } from '../utils';
+import { snakeToKebab } from '../utils';
 
-export async function camelToSnakeManager(): Promise<void> {
+export async function snakeToKebabManager(): Promise<void> {
 	const editor = vscode.window.activeTextEditor;
 
 	if (!editor) return;
 
 	const selectedText = editor.document.getText(editor.selection);
 
-	const text = camelToSnakeCase(selectedText);
+	const text = snakeToKebab(selectedText);
 
 	const docText = editor.document.getText().replace(selectedText, text);
 

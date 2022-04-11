@@ -17,6 +17,7 @@ import {
 	camelToKebabManager,
 	kebabToSnakeManager,
 } from './managers';
+import { snakeToKebabManager } from './managers/snakeToKebab';
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log(
@@ -39,6 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
 		['selection-manager.kebab-to-camel', kebabToCamelManager],
 		['selection-manager.camel-to-kebab', camelToKebabManager],
 		['selection-manager.kebab-to-snake', kebabToSnakeManager],
+		['selection-manager.snake-to-kebab', snakeToKebabManager],
 		['selection-manager.length', lengthManager],
 	];
 
