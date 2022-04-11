@@ -12,3 +12,5 @@ export const snakeToCamelCase = (str: string): string => str.toLowerCase().repla
 export const camelToSnakeCase = (str: string): string => str.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`);
 
 export const kebabToCamel = (str: string) => str.replace(/-./g, x=>x[1].toUpperCase());
+
+export const camelToKebab = (str: string) => str.replace(/[A-Z]+(?![a-z])|[A-Z]/g, ($, ofs) => (ofs ? "-" : "") + $.toLowerCase());

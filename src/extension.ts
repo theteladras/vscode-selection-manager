@@ -14,6 +14,7 @@ import {
 	snakeToCamelManager,
 	lengthManager,
 	kebabToCamelManager,
+	camelToKebabManager,
 } from './managers';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -23,7 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 	const dispose: [string, () => Promise<void>][] = [
 		['selection-manager.copy', copyManager],
-		['selection-manager.move',moveManager],
+		['selection-manager.move', moveManager],
 		['selection-manager.isolate', isolateManager],
 		['selection-manager.search', searchManager],
 		['selection-manager.url-encode', urlEncodeManager],
@@ -35,6 +36,7 @@ export function activate(context: vscode.ExtensionContext) {
 		['selection-manager.camel-to-snake', camelToSnakeManager],
 		['selection-manager.snake-to-camel', snakeToCamelManager],
 		['selection-manager.kebab-to-camel', kebabToCamelManager],
+		['selection-manager.camel-to-kebab', camelToKebabManager],
 		['selection-manager.length', lengthManager],
 	];
 
