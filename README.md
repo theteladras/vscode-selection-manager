@@ -20,7 +20,7 @@ isolate the selection, results in having the content of the document replaced wi
 
 ---
 #### >Search Selection
-search for the selection on google
+search for the selection on *google*
 
 ---
 #### >URL Encode Selection
@@ -75,5 +75,9 @@ the selected snake case text will be turned to kebab case _(eg. call\_sync -> ca
 pops an alert, in the bottom right corner, with the information of the length of the selected text
 
 ---
+#### >Number of non ASCII Characters in Selection
+pops an alert, in the bottom right corner, with the information of the number of non ascii characters in the selected text
+
+---
 #### >Lorem Ipsum on Selection
-replaces the selection with lorem ipsum, if nothing is selected will replace the whole line where the cursor is placed
+replaces the selection with *lorem ipsum*, if nothing is selected will replace the whole line where the cursor is placed

@@ -16,3 +16,4 @@ export * from './camelToKebab';
 export * from './kebabToSnake';
 export * from './snakeToCamel';
 export * from './loremIpsum';
+export * from './nonAscii';

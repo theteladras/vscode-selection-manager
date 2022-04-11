@@ -3,7 +3,7 @@
 	"displayName": "Selection Manager",
 	"description": "Manage selected text of a file.",
 	"icon": "images/manage-selection.png",
-	"version": "0.0.19",
+	"version": "0.0.20",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.66.0"
@@ -29,7 +29,8 @@
 		"onCommand:selection-manager.kebab-to-snake",
 		"onCommand:selection-manager.snake-to-kebab",
 		"onCommand:selection-manager.length",
-		"onCommand:selection-manager.loremIpsum"
+		"onCommand:selection-manager.lorem-ipsum",
+		"onCommand:selection-manager.non-ascii"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -103,8 +104,12 @@
 				"title": "Length of Selection"
 			},
 			{
-				"command": "selection-manager.loremIpsum",
+				"command": "selection-manager.lorem-ipsum",
 				"title": "Lorem Ipsum on Selection"
+			},
+			{
+				"command": "selection-manager.non-ascii",
+				"title": "Number of non ASCII Characters in Selection"
 			}
 		]
 	},

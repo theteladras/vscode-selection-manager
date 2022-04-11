@@ -29,3 +29,5 @@ export const kebabToSnake = (str: string): string => str.replace(/-/g, "_");
 export const snakeToKebab = (str: string): string => str.replace(/_/g, "-");
 
 export const generateLoremIpsum = (): string => lorem.generator.generateRandomSentence();
+
+export const removeAsciiCharacters = (str: string): string => str.replace(/[ -~]/g, "");
