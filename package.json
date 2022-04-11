@@ -3,7 +3,7 @@
 	"displayName": "Selection Manager",
 	"description": "Manage selected text of a file.",
 	"icon": "images/manage-selection.png",
-	"version": "0.0.20",
+	"version": "0.0.21",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.66.0"
@@ -30,7 +30,8 @@
 		"onCommand:selection-manager.snake-to-kebab",
 		"onCommand:selection-manager.length",
 		"onCommand:selection-manager.lorem-ipsum",
-		"onCommand:selection-manager.non-ascii"
+		"onCommand:selection-manager.non-ascii",
+		"onCommand:selection-manager.reverse"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -110,6 +111,10 @@
 			{
 				"command": "selection-manager.non-ascii",
 				"title": "Number of non ASCII Characters in Selection"
+			},
+			{
+				"command": "selection-manager.reverse",
+				"title": "Reverse Selection"
 			}
 		]
 	},

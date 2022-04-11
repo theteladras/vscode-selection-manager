@@ -79,5 +79,9 @@ pops an alert, in the bottom right corner, with the information of the length of
 pops an alert, in the bottom right corner, with the information of the number of non ascii characters in the selected text
 
 ---
+#### >Reverse Selection
+It will reverse the selection, line by line
+
+---
 #### >Lorem Ipsum on Selection
 replaces the selection with *lorem ipsum*, if nothing is selected will replace the whole line where the cursor is placed
