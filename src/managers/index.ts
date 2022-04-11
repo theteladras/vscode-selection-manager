@@ -11,3 +11,4 @@ export * from './uppercase';
 export * from './camelToSnake';
 export * from './snakeToCamel';
 export * from './length';
+export * from './kebabToCamel';

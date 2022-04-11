@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { toCamelCase } from '../utils';
+import { snakeToCamelCase } from '../utils';
 
 export async function snakeToCamelManager(): Promise<void> {
 	const editor = vscode.window.activeTextEditor;
@@ -8,7 +8,7 @@ export async function snakeToCamelManager(): Promise<void> {
 
 	const selectedText = editor.document.getText(editor.selection);
 
-	const camelText = toCamelCase(selectedText);
+	const camelText = snakeToCamelCase(selectedText);
 
 	const docText = editor.document.getText().replace(selectedText, camelText);
 

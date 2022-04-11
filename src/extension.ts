@@ -13,6 +13,7 @@ import {
 	camelToSnakeManager,
 	snakeToCamelManager,
 	lengthManager,
+	kebabToCamelManager,
 } from './managers';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -20,73 +21,24 @@ export function activate(context: vscode.ExtensionContext) {
 		'Congratulations, your extension "selection-manager" is now active!'
 	);
 
-	const dispoeCopyManager = vscode.commands.registerCommand(
-		'selection-manager.copy',
-		copyManager
-	);
-	const dispoeMoveManager = vscode.commands.registerCommand(
-		'selection-manager.move',
-		moveManager
-	);
-	const dispoeIsolateManager = vscode.commands.registerCommand(
-		'selection-manager.isolate',
-		isolateManager
-	);
-	const dispoeSearchManager = vscode.commands.registerCommand(
-		'selection-manager.search',
-		searchManager
-	);
-	const dispoeUrlEncodeManager = vscode.commands.registerCommand(
-		'selection-manager.url-encode',
-		urlEncodeManager
-	);
-	const dispoeBase64EncodeManager = vscode.commands.registerCommand(
-		'selection-manager.base64-encode',
-		base64EncodeManager
-	);
-	const dispoeUrlDecodeManager = vscode.commands.registerCommand(
-		'selection-manager.url-decode',
-		urlDecodeManager
-	);
-	const dispoeBase64DecodeManager = vscode.commands.registerCommand(
-		'selection-manager.base64-decode',
-		base64DecodeManager
-	);
-	const disposeLowercaseManager = vscode.commands.registerCommand(
-		'selection-manager.lowercase',
-		lowercaseManager
-	);
-	const disposeUppercaseManager = vscode.commands.registerCommand(
-		'selection-manager.uppercase',
-		uppercaseManager
-	);
-	const disposeCamelToSnakeManager = vscode.commands.registerCommand(
-		'selection-manager.camel-to-snake',
-		camelToSnakeManager
-	);
-	const disposeSnakeToCamelManager = vscode.commands.registerCommand(
-		'selection-manager.snake-to-camel',
-		snakeToCamelManager
-	);
-	const disposeLengthManager = vscode.commands.registerCommand(
-		'selection-manager.length',
-		lengthManager
-	);
+	const dispose: [string, () => Promise<void>][] = [
+		['selection-manager.copy', copyManager],
+		['selection-manager.move',moveManager],
+		['selection-manager.isolate', isolateManager],
+		['selection-manager.search', searchManager],
+		['selection-manager.url-encode', urlEncodeManager],
+		['selection-manager.base64-encode', base64EncodeManager],
+		['selection-manager.url-decode', urlDecodeManager],
+		['selection-manager.base64-decode', base64DecodeManager],
+		['selection-manager.lowercase', lowercaseManager],
+		['selection-manager.uppercase', uppercaseManager],
+		['selection-manager.camel-to-snake', camelToSnakeManager],
+		['selection-manager.snake-to-camel', snakeToCamelManager],
+		['selection-manager.kebab-to-camel', kebabToCamelManager],
+		['selection-manager.length', lengthManager],
+	];
 
-	context.subscriptions.push(
-		dispoeCopyManager,
-		dispoeMoveManager,
-		dispoeSearchManager,
-		dispoeUrlEncodeManager,
-		dispoeBase64EncodeManager,
-		dispoeUrlDecodeManager,
-		dispoeBase64DecodeManager,
-		disposeLowercaseManager,
-		disposeUppercaseManager,
-		disposeCamelToSnakeManager,
-		disposeSnakeToCamelManager,
-		disposeLengthManager
-	);
+	dispose.forEach(([key, manager]) => context.subscriptions.push(vscode.commands.registerCommand(key, manager)));
 }
 
-export function deactivate() {}
+export function deactivate() { }
