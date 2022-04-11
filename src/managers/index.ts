@@ -15,3 +15,4 @@ export * from './kebabToCamel';
 export * from './camelToKebab';
 export * from './kebabToSnake';
 export * from './snakeToCamel';
+export * from './loremIpsum';

@@ -16,6 +16,7 @@ import {
 	kebabToCamelManager,
 	camelToKebabManager,
 	kebabToSnakeManager,
+	loremIpsumManager,
 } from './managers';
 import { snakeToKebabManager } from './managers/snakeToKebab';
 
@@ -42,6 +43,7 @@ export function activate(context: vscode.ExtensionContext) {
 		['selection-manager.kebab-to-snake', kebabToSnakeManager],
 		['selection-manager.snake-to-kebab', snakeToKebabManager],
 		['selection-manager.length', lengthManager],
+		['selection-manager.loremIpsum', loremIpsumManager],
 	];
 
 	dispose.forEach(([key, manager]) => context.subscriptions.push(vscode.commands.registerCommand(key, manager)));

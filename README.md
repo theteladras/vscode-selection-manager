@@ -73,3 +73,7 @@ the selected snake case text will be turned to kebab case _(eg. call\_sync -> ca
 ---
 #### >Length of Selection
 pops an alert, in the bottom right corner, with the information of the length of the selected text
+
+---
+#### >Lorem Ipsum on Selection
+replaces the selection with lorem ipsum, if nothing is selected will replace the whole line where the cursor is placed

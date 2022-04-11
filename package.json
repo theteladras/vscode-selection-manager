@@ -3,7 +3,7 @@
 	"displayName": "Selection Manager",
 	"description": "Manage selected text of a file.",
 	"icon": "images/manage-selection.png",
-	"version": "0.0.18",
+	"version": "0.0.19",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.66.0"
@@ -28,7 +28,8 @@
 		"onCommand:selection-manager.camel-to-kebab",
 		"onCommand:selection-manager.kebab-to-snake",
 		"onCommand:selection-manager.snake-to-kebab",
-		"onCommand:selection-manager.length"
+		"onCommand:selection-manager.length",
+		"onCommand:selection-manager.loremIpsum"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -100,6 +101,10 @@
 			{
 				"command": "selection-manager.length",
 				"title": "Length of Selection"
+			},
+			{
+				"command": "selection-manager.loremIpsum",
+				"title": "Lorem Ipsum on Selection"
 			}
 		]
 	},
@@ -135,5 +140,8 @@
 		"webpack": "^5.70.0",
 		"webpack-cli": "^4.9.2"
 	},
-	"publisher": "ManageTextSelection"
+	"publisher": "ManageTextSelection",
+	"dependencies": {
+		"lorem-ipsum": "^2.0.4"
+	}
 }
