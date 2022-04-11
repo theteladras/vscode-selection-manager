@@ -48,11 +48,11 @@ turns the selected text to uppercase
 
 ---
 #### >Camel to Snake case Selection
-the selected camel case text will be turned to snake case _(eg. callAsync -> call_async)_
+the selected camel case text will be turned to snake case _(eg. callAsync -> call\_async)_
 
 ---
 #### >Snake to Camel case Selection
-the selected snake case text will be turned to camel case _(eg. call_async -> callAsync)_
+the selected snake case text will be turned to camel case _(eg. call\_async -> callAsync)_
 
 ---
 #### >Kebab to Camel case Selection
@@ -61,6 +61,10 @@ the selected kebab case text will be turned to camel case _(eg. call-async -> ca
 ---
 #### >Camel to Kebab case Selection
 the selected camel case text will be turned to kebab case _(eg. callAsync -> call-async)_
+
+---
+#### >Kebab to Snake case Selection
+the selected kebab case text will be turned to snake case _(eg. call-sync -> call\_async)_
 
 ---
 #### >Length of Selection

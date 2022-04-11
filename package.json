@@ -3,7 +3,7 @@
 	"displayName": "Selection Manager",
 	"description": "Manage selected text of a file.",
 	"icon": "images/manage-selection.png",
-	"version": "0.0.16",
+	"version": "0.0.17",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.66.0"
@@ -26,6 +26,7 @@
 		"onCommand:selection-manager.snake-to-camel",
 		"onCommand:selection-manager.kebab-to-camel",
 		"onCommand:selection-manager.camel-to-kebab",
+		"onCommand:selection-manager.kebab-to-snake",
 		"onCommand:selection-manager.length"
 	],
 	"main": "./dist/extension.js",
@@ -86,6 +87,10 @@
 			{
 				"command": "selection-manager.camel-to-kebab",
 				"title": "Camel to Kebab case Selection"
+			},
+			{
+				"command": "selection-manager.kebab-to-snake",
+				"title": "Kebab to Snake case Selection"
 			},
 			{
 				"command": "selection-manager.length",
