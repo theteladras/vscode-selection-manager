@@ -19,8 +19,9 @@ import {
 	loremIpsumManager,
 	nonAsciiManager,
 	reverseManager,
+	logManager,
+	snakeToKebabManager
 } from './managers';
-import { snakeToKebabManager } from './managers/snakeToKebab';
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log(
@@ -47,7 +48,8 @@ export function activate(context: vscode.ExtensionContext) {
 		['selection-manager.length', lengthManager],
 		['selection-manager.lorem-ipsum', loremIpsumManager],
 		['selection-manager.non-ascii', nonAsciiManager],
-		['selection-manager.reverse', reverseManager]
+		['selection-manager.reverse', reverseManager],
+		['selection-manager.log', logManager],
 	];
 
 	dispose.forEach(([key, manager]) => context.subscriptions.push(vscode.commands.registerCommand(key, manager)));

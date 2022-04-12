@@ -31,3 +31,5 @@ export const snakeToKebab = (str: string): string => str.replace(/_/g, "-");
 export const generateLoremIpsum = (): string => lorem.generator.generateRandomSentence();
 
 export const removeAsciiCharacters = (str: string): string => str.replace(/[ -~]/g, "");
+
+export const getRandomNumberInRange = (fromOrTo: number, to?: number) => Math.floor(Math.random() * (to ? to : fromOrTo)) + (to ? fromOrTo : 0);

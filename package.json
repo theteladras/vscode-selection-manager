@@ -3,7 +3,7 @@
 	"displayName": "Selection Manager",
 	"description": "Manage selected text of a file.",
 	"icon": "images/manage-selection.png",
-	"version": "0.0.21",
+	"version": "0.0.22",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.66.0"
@@ -31,7 +31,8 @@
 		"onCommand:selection-manager.length",
 		"onCommand:selection-manager.lorem-ipsum",
 		"onCommand:selection-manager.non-ascii",
-		"onCommand:selection-manager.reverse"
+		"onCommand:selection-manager.reverse",
+		"onCommand:selection-manager.log"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -115,6 +116,10 @@
 			{
 				"command": "selection-manager.reverse",
 				"title": "Reverse Selection"
+			},
+			{
+				"command": "selection-manager.log",
+				"title": "Log Selection"
 			}
 		]
 	},
